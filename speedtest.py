@@ -40,22 +40,22 @@ fn = lambda: np.dot(A, B)
 t = test(fn, number=1000)
 print("dotted two (%d) vectors in %0.2f us" % (n, 1e6*t))
 
-# ###############################################################################
-# ### Test 4
-# m, n = (2000,1000)
-# A = npr.randn(m, n)
+###############################################################################
+### Test 4
+m, n = (2000,1000)
+A = npr.randn(m, n)
 
-# fn = lambda: np.linalg.svd(A, full_matrices=False)
-# t = test(fn, number=1)
-# print("SVD of ({:d},{:d}) matrix in {:0.3f} s".format(m, n, t))
+fn = lambda: np.linalg.svd(A, full_matrices=False)
+t = test(fn, number=1)
+print("SVD of ({:d},{:d}) matrix in {:0.3f} s".format(m, n, t))
 
-# ###############################################################################
-# ### Test 5
-# n = 1500
-# A = npr.randn(n, n)
-# fn = lambda: np.linalg.eig(A)
-# t = test(fn, number=1)
-# print("Eigendecomposition of ({:d},{:d}) matrix in {:0.3f} s".format(n, n, t))
+###############################################################################
+### Test 5
+n = 1500
+A = npr.randn(n, n)
+fn = lambda: np.linalg.eig(A)
+t = test(fn, number=1)
+print("Eigendecomposition of ({:d},{:d}) matrix in {:0.3f} s".format(n, n, t))
 
 ###############################################################################
 ### Results
