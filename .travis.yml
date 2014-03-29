@@ -1,9 +1,10 @@
 language: python
 python:
   - 2.7
-#install:
-#  - sudo pip uninstall numpy
-#  - sudo apt-get install python-numpy
+install:
+  - pip uninstall -y numpy
+  - sudo apt-get install python-numpy
 script:
+#  - export PYTHONPATH=/usr/lib/python2.7/dist-packages:$PYTHONPATH
   - python check-numpy.py
   - python speedtest.py
