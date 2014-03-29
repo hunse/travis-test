@@ -16,7 +16,7 @@ A = npr.randn(n,n)
 B = npr.randn(n,n)
 
 fn = lambda: np.dot(A, B)
-t = test(fn, number=3)
+t = test(fn, number=10)
 print("multiplied two (%d,%d) matrices in %0.1f ms" % (n, n, 1e3 * t))
 
 ###############################################################################
@@ -26,7 +26,7 @@ A = npr.randn(n, n)
 B = npr.randn(n)
 
 fn = lambda: np.dot(A, B)
-t = test(fn, number=10)
+t = test(fn, number=100)
 print("multiplied (%d,%d) matrix and (%d) vector in %0.1f ms" % (
         n, n, n, 1e3 * t))
 
@@ -37,7 +37,7 @@ A = npr.randn(n)
 B = npr.randn(n)
 
 fn = lambda: np.dot(A, B)
-t = test(fn, number=100)
+t = test(fn, number=1000)
 print("dotted two (%d) vectors in %0.2f us" % (n, 1e6*t))
 
 # ###############################################################################
