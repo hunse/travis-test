@@ -3,8 +3,8 @@ python:
   - 2.7
 install:
   - pip uninstall -y numpy
-  - sudo apt-get install python-numpy
+  - sudo apt-get install -y python-numpy
 script:
-#  - export PYTHONPATH=/usr/lib/python2.7/dist-packages:$PYTHONPATH
+  - export PYTHONPATH=/usr/lib/python2.7/dist-packages:$PYTHONPATH
   - python check-numpy.py
   - python speedtest.py
